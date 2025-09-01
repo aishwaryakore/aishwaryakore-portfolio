@@ -1,10 +1,29 @@
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ExternalLink, Github, Eye, Brain, ShoppingCart, Calendar } from 'lucide-react';
+import { ExternalLink, Github, Eye, Brain, ShoppingCart, Calendar, Codesandbox } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
+    {
+      title: "Real-Time Code Collaboration Editor",
+      description: "A collaborative coding platform enabling multiple users to join rooms, write, and execute code in real time with low latency and multi-language support.",
+      icon: Codesandbox, // you can import from lucide-react or another icon set
+      technologies: ["React.js", "Node.js", "Express", "Socket.IO (WebSockets)", "Piston API"],
+      achievements: [
+        "Real-time collaboration with live code synchronization",
+        "Supports 10+ programming languages with Piston API",
+        "Room-based session management for secure multi-user access",
+        "Scales to 50+ concurrent users with <200ms latency",
+        "Reduced code execution response time by ~35%",
+        "Seamless REST API integration for execution and session handling"
+      ],
+      links: {
+        github: "https://github.com/aishwaryakore/code-colab",
+        demo: "https://code-colab-client.onrender.com/"
+      },
+      featured: true
+    },
     {
       title: "AI-Powered Accessibility Enhancer",
       description: "A Chrome extension leveraging vision and language models to improve web accessibility for users with disabilities. Features real-time text-to-speech, alt text generation, and cognitive accessibility improvements.",
@@ -17,7 +36,7 @@ const Projects = () => {
         "Cognitive accessibility through text simplification"
       ],
       links: {
-        github: "#",
+        github: "https://github.com/aishwaryakore/ai-accessibility-enhancer",
         demo: "#"
       },
       featured: true
@@ -36,8 +55,8 @@ const Projects = () => {
         "Scalable to 1,000+ concurrent users with <200ms API latency"
       ],
       links: {
-        github: "#",
-        demo: "#"
+        github: "https://github.com/cs-b556-g7",
+        demo: "https://blue-rock-0d2af4e10.6.azurestaticapps.net/"
       },
       featured: true
     },
@@ -55,8 +74,8 @@ const Projects = () => {
         "Handles 10,000+ monthly requests at peak traffic"
       ],
       links: {
-        github: "#",
-        demo: "#"
+        github: "https://github.com/aishwaryakore/life-n-linen",
+        demo: "https://rococo-yeot-f259e1.netlify.app/"
       },
       featured: false
     }
@@ -78,20 +97,19 @@ const Projects = () => {
         {projects.map((project, index) => {
           const IconComponent = project.icon;
           return (
-            <Card 
-              key={index} 
-              className={`relative overflow-hidden transition-all duration-500 hover:shadow-surface ${
-                project.featured 
-                  ? 'bg-gradient-surface border-primary/20 hover:border-primary/40' 
-                  : 'bg-surface-elevated border-border hover:border-primary/30'
-              }`}
+            <Card
+              key={index}
+              className={`relative overflow-hidden transition-all duration-500 hover:shadow-surface ${project.featured
+                ? 'bg-gradient-surface border-primary/20 hover:border-primary/40'
+                : 'bg-surface-elevated border-border hover:border-primary/30'
+                }`}
             >
               {project.featured && (
                 <div className="absolute top-0 right-0 bg-gradient-primary text-primary-foreground px-3 py-1 text-xs font-medium rounded-bl-lg">
                   Featured
                 </div>
               )}
-              
+
               <div className="p-8">
                 <div className="flex items-start space-x-6">
                   {/* Project Icon */}
@@ -100,7 +118,7 @@ const Projects = () => {
                       <IconComponent className="h-8 w-8 text-primary" />
                     </div>
                   </div>
-                  
+
                   {/* Project Content */}
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-4">
@@ -109,7 +127,7 @@ const Projects = () => {
                         <p className="text-text-secondary leading-relaxed">{project.description}</p>
                       </div>
                     </div>
-                    
+
                     {/* Achievements */}
                     <div className="mb-6">
                       <h4 className="text-sm font-semibold text-text-primary mb-3">Key Achievements:</h4>
@@ -122,15 +140,15 @@ const Projects = () => {
                         ))}
                       </ul>
                     </div>
-                    
+
                     {/* Technologies */}
                     <div className="mb-6">
                       <h4 className="text-sm font-semibold text-text-primary mb-3">Technologies Used:</h4>
                       <div className="flex flex-wrap gap-2">
                         {project.technologies.map((tech, idx) => (
-                          <Badge 
-                            key={idx} 
-                            variant="outline" 
+                          <Badge
+                            key={idx}
+                            variant="outline"
                             className="bg-surface-elevated border-primary/20 text-text-secondary hover:border-primary/40 transition-colors duration-300"
                           >
                             {tech}
@@ -138,14 +156,14 @@ const Projects = () => {
                         ))}
                       </div>
                     </div>
-                    
+
                     {/* Project Links */}
                     <div className="flex space-x-4">
-                      <Button variant="default" size="sm" className="group">
+                      <Button variant="default" size="sm" className="group" onClick={() => window.location.href = project.links.github}>
                         <Github className="h-4 w-4 mr-2 group-hover:rotate-12 transition-transform duration-300" />
                         View Code
                       </Button>
-                      <Button variant="outline" size="sm" className="group">
+                      <Button variant="outline" size="sm" className="group" onClick={() => window.location.href = project.links.demo}>
                         <ExternalLink className="h-4 w-4 mr-2 group-hover:translate-x-1 transition-transform duration-300" />
                         Live Demo
                       </Button>
