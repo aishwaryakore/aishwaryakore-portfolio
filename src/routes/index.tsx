@@ -25,8 +25,8 @@ function Hero() {
     <section className="max-w-7xl mx-auto px-6 md:px-10 pt-12 md:pt-20 pb-24 grid md:grid-cols-12 gap-10 items-center min-h-[calc(100vh-4rem)]">
       <div className="md:col-span-7">
         <div className="flex items-center gap-3 mb-8">
-          <span className="h-2 w-2 rounded-full bg-accent" />
-          <span className="eyebrow">Available · May 2026</span>
+          {/* <span className="h-2 w-2 rounded-full bg-accent" /> */}
+          {/* <span className="eyebrow">Available · May 2026</span> */}
         </div>
         <h1 className="display text-[16vw] md:text-[8.5rem]">
           Aishwarya<br /><em className="text-accent">Kore.</em>
@@ -35,8 +35,7 @@ function Hero() {
           Software Engineer & Computer Science Graduate
         </p>
         <p className="mt-6 max-w-xl text-lg leading-relaxed">
-          Full‑stack developer specializing in scalable web applications, cloud computing,
-          and AI‑powered systems. Currently pursuing MS in Computer Science at Indiana University.
+          Hi, I'm a full-stack engineer with an MS in Computer Science from Indiana University. I build web applications end-to-end, and bring AI into the heart of them.
         </p>
         <div className="mt-10 flex flex-wrap gap-3">
           <a href="#projects" className="px-5 py-3 rounded-full bg-foreground text-background text-sm hover:bg-accent transition-colors">
@@ -48,11 +47,11 @@ function Hero() {
         </div>
         <div className="mt-8 flex gap-3">
           {[{ Icon: Mail, href: "mailto:aishwaryakore072@gmail.com", label: "Email" },
-            { Icon: Linkedin, href: "#", label: "LinkedIn" },
-            { Icon: Github, href: "#", label: "GitHub" },
-            { Icon: FileText, href: "#", label: "Resume" }].map(({ Icon, href, label }) => (
+          { Icon: Linkedin, href: "https://www.linkedin.com/in/aishwaryakore", label: "LinkedIn" },
+          { Icon: Github, href: "https://github.com/aishwaryakore", label: "GitHub" },
+          { Icon: FileText, href: "https://drive.google.com/drive/folders/1zdrxUcwj7j9VhgdB5F87wnY1PGqD344l?usp=drive_link", label: "Resume" }].map(({ Icon, href, label }) => (
             <a key={label} href={href} aria-label={label}
-               className="h-11 w-11 grid place-items-center rounded-full border border-border hover:border-foreground hover:bg-secondary transition-colors">
+              className="h-11 w-11 grid place-items-center rounded-full border border-border hover:border-foreground hover:bg-secondary transition-colors">
               <Icon className="h-4 w-4" />
             </a>
           ))}
@@ -61,16 +60,18 @@ function Hero() {
 
       <div className="md:col-span-5">
         <div className="relative aspect-[4/5] rounded-3xl border border-border bg-card overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,oklch(0.62_0.18_38_/_0.15),transparent_60%)]" />
-          <div className="absolute inset-0 grid place-items-center">
-            <span className="display text-[14rem] text-accent/30 select-none">AK</span>
-          </div>
-          <div className="absolute bottom-6 left-6 right-6 flex justify-between text-xs">
+          <img
+            src="/portrait.jpg"
+            alt="Aishwarya Kore"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+          <div className="absolute bottom-6 left-6 right-6 flex justify-between text-xs text-white mix-blend-difference">
             <span className="eyebrow">Portrait</span>
             <span className="eyebrow">2026</span>
           </div>
         </div>
       </div>
+
     </section>
   );
 }
@@ -94,14 +95,21 @@ function About() {
     <section id="about" className="max-w-7xl mx-auto px-6 md:px-10 py-24 scroll-mt-20">
       <SectionHeader num="01" kicker="About" title="A short note." />
       <div className="grid md:grid-cols-12 gap-10">
-        <p className="md:col-span-7 text-xl leading-relaxed">
+        {/* <p className="md:col-span-7 text-xl leading-relaxed">
           I'm a software engineer with four years of experience across frontend, backend,
           and AI systems. I care about clarity, velocity, and the small details users never
           notice but always feel — building software that's <em className="text-accent">quietly obvious</em>.
+        </p> */}
+        <p className="md:col-span-7 text-xl leading-relaxed">
+          I'm a Full Stack Engineer with 2 years of experience building end-to-end web applications, with a Master's in Computer Science from Indiana University Bloomington.
+          Over time, my focus has gravitated strongly toward AI, specifically GenAI and Agentic AI systems. I work with tools like LangChain, LangGraph, and RAG pipelines to build intelligent, production-ready products that go beyond simple chatbots and actually get things done.
+          I enjoy working across the entire stack, designing clean, responsive frontends, architecting scalable backends, and weaving AI capabilities into the core of what I build.
+          I'm actively looking for full-time roles where I can contribute to teams building innovative, AI-powered products. If that sounds like you, I'd love to connect!
         </p>
+
         <div className="md:col-span-5 grid gap-4">
           <Card icon={MapPin} label="Location" value="Bloomington, IN" sub="Open to relocation" />
-          <Card icon={Briefcase} label="Experience" value="4+ years" sub="Frontend · Backend · AI" />
+          <Card icon={Briefcase} label="Experience" value="2+ years" sub="Full Stack · AI" />
         </div>
       </div>
     </section>
@@ -130,14 +138,14 @@ const education = [
     degree: "MS, Computer Science",
     period: "Aug 2024 — May 2026",
     gpa: "3.71 / 4.0",
-    courses: ["Applied Algorithms", "Machine Learning", "Distributed Systems", "Generative AI"],
+    courses: ["Applied Algorithms", "Applied Machine Learning", "Computer Networks", "Advanced Database Concepts", "Software Engineering", "Engineering Cloud Computing", "Data Visualization", "Security for Networked Systems", "Distributed Systems"],
   },
   {
     school: "Savitribai Phule Pune University",
     degree: "B.E., Computer Engineering",
     period: "Aug 2018 — May 2022",
     gpa: "3.73 / 4.0",
-    courses: ["Data Structures", "Operating Systems", "DBMS", "Computer Networks"],
+    courses: ["Fundamentals of Programming Languages", "Data Structures and Algorithms", "Object Oriented Programming", "Advanced Data Structures", "Operating Systenms", "Microprocessor", "Database Management Systems", "Web Technology", "Embedded Systems and Internet of Things", "High Performance Computing", "Data Mining and Warehousing", "Data Analytics", "Cloud Computing", "AI and Robotics"],
   },
 ];
 
@@ -202,10 +210,14 @@ const roles = [
 ];
 
 const awards = [
-  { title: "Rising Star Award", org: "Data Axle Annual R&R", date: "Jan 2023",
-    desc: "Honored for exceptional contributions to enterprise application performance." },
-  { title: "IEEE Publication", org: "ICECA 2023", date: "Jan 2023",
-    desc: "Co‑authored: Burp Suite Extension for Script‑Based Attacks, presented at the 6th International Conference on Electronics, Communication and Aerospace Technology." },
+  {
+    title: "Rising Star Award", org: "Data Axle Annual R&R", date: "Jan 2023",
+    desc: "Honored for exceptional contributions to enterprise application performance."
+  },
+  {
+    title: "IEEE Publication", org: "ICECA 2023", date: "Jan 2023",
+    desc: "Co‑authored: Burp Suite Extension for Script‑Based Attacks, presented at the 6th International Conference on Electronics, Communication and Aerospace Technology."
+  },
 ];
 
 function Experience() {
@@ -274,18 +286,60 @@ type Project = {
 };
 
 const projects: Project[] = [
-  { title: "Autonomous Content Generation",
-    desc: "Multi‑agent LLM system using LangGraph with task‑specific routing, RAG‑based grounding, and parallel execution for scalable long‑form generation.",
-    stack: ["Python", "LangGraph", "LangChain", "OpenAI", "LangSmith"], featured: true },
-  { title: "Developer Knowledge Assistant",
-    desc: "Production RAG over LangChain docs using LCEL and OpenAI embeddings — citation‑backed responses with reduced hallucination.",
-    stack: ["Python", "LCEL", "ChromaDB", "OpenAI"], featured: true },
-  { title: "Real‑Time Code Collaboration",
-    desc: "Collaborative code editor supporting concurrent execution across 12+ languages, 10+ users editing at sub‑150ms latency.",
-    stack: ["React", "Node.js", "Socket.IO", "Piston"] },
-  { title: "Event/Venue Management Platform",
-    desc: "Full‑stack microservices for real‑time booking, live chat, and Stripe payments. JWT/OAuth2, automated CI/CD on Azure.",
-    stack: ["TypeScript", "Node", "Postgres", "Stripe", "Azure"] },
+  {
+    title: "Autonomous Content Generation",
+    desc: "An AI-powered multi-agent blog generation system using LangGraph and LangChain that autonomously researches, structures, and produces high-quality long-form content from a single topic prompt.",
+    stack: ["Python", "LangGraph", "LangChain", "OpenAI", "LangSmith"],
+    code: "https://github.com/aishwaryakore/blog-writing-agent",
+    demo: "#",
+    featured: true
+  },
+  {
+    title: "Developer Knowledge Assistant",
+    desc: "A production-grade RAG system over LangChain docs using LCEL and OpenAI embeddings, optimizing retrieval to deliver accurate, citation-backed responses with reduced hallucination",
+    stack: ["Python", "LCEL", "ChromaDB", "OpenAI"],
+    featured: true,
+    code: "https://github.com/aishwaryakore/grep-it",
+    demo: "#"
+  },
+  {
+    title: "Real‑Time Code Collaboration",
+    desc: "Real-time collaborative code editor that lets users create shared rooms, invite collaborators, and code together live directly in the browser",
+    stack: ["React", "Node.js", "Socket.IO", "Piston"],
+    code: "https://github.com/aishwaryakore/code-colab",
+    demo: "https://code-colab-client.onrender.com/",
+    featured: true
+  },
+  {
+    title: "Event/Venue Management Platform",
+    desc: "Full-stack event and venue management platform built on a scalable microservices architecture with real-time booking, live chat, secure Stripe payments, and automated CI/CD deployment.",
+    stack: ["TypeScript", "Node", "Postgres", "Stripe", "Azure"],
+    code: "https://github.com/cs-b556-g7",
+    demo: "#",
+    featured: true
+  },
+  {
+    title: "Distributed CI/CD Pipeline System",
+    desc: "Production-style distributed CI/CD platform inspired by Jenkins, featuring Kafka-based job orchestration, distributed worker execution, GitHub webhook automation, Kubernetes auto-scaling, and containerized pipeline execution.",
+    stack: ["Python", "FastAPI", "Kafka", "Docker", "Kubernetes"],
+    code: "https://github.com/CSCI-P434-DS/distributed-cicd-engine",
+    demo: "#",
+    featured: true
+  },
+  {
+    title: "AI Chatbot",
+    desc: "ChatGPT-style conversational AI chatbot built with LangGraph and LangChain featuring persistent multi-turn memory, real-time tool calling, streaming responses, and multi-session chat management with SQLite-backed state persistence.",
+    stack: ["Python", "LangGraph", "LangChain", "Streamlit", "SQLite"],
+    code: "https://github.com/aishwaryakore/ai-chatbot",
+    demo: "#"
+  },
+  {
+    title: "AI Accessibility Enhancer",
+    desc: "AI-powered Chrome extension that improves web accessibility through intelligent alt text generation, content simplification, text-to-speech, and real-time accessibility analysis for users with visual and cognitive disabilities.",
+    stack: ["JavaScript", "Chrome Extension", "Manifest V3", "HTML/CSS", "AI APIs"],
+    code: "https://github.com/aishwaryakore/ai-accessibility-enhancer",
+    demo: "#"
+  }
 ];
 
 function Projects() {
@@ -322,9 +376,16 @@ function Projects() {
                 <a href={p.code ?? "#"} className="text-sm px-4 py-2 rounded-full border border-border hover:border-foreground transition-colors inline-flex items-center gap-2">
                   <Github className="h-3.5 w-3.5" /> Code
                 </a>
-                <a href={p.demo ?? "#"} className="text-sm px-4 py-2 rounded-full bg-foreground text-background hover:bg-accent transition-colors">
-                  Live demo →
-                </a>
+                {p.demo && p.demo !== "#" && (
+                  <a
+                    href={p.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm px-4 py-2 rounded-full bg-foreground text-background hover:bg-accent transition-colors"
+                  >
+                    Live demo →
+                  </a>
+                )}
               </div>
             </article>
           </li>
@@ -336,9 +397,9 @@ function Projects() {
 
 /* ---------- SKILLS ---------- */
 const skills = [
-  { icon: Code2, title: "Languages", items: ["Python", "Java", "C++", "TypeScript"] },
+  { icon: Code2, title: "Languages", items: ["Python", "Java", "C++"] },
   { icon: Sparkles, title: "Frontend", items: ["React.js", "Redux", "TypeScript", "Tailwind CSS"] },
-  { icon: Database, title: "Backend & DB", items: ["Node.js", "Express", "PostgreSQL", "MongoDB"] },
+  { icon: Database, title: "Backend & DB", items: ["FastAPI", "Node.js", "Express", "PostgreSQL", "MongoDB"] },
   { icon: Cloud, title: "Cloud & DevOps", items: ["AWS", "Docker", "Kubernetes", "CI/CD"] },
   { icon: Sparkles, title: "Generative AI", items: ["LangChain", "LangGraph", "RAG", "OpenAI API"] },
   { icon: Wrench, title: "Tools", items: ["Git", "GitHub", "Postman", "JIRA"] },
@@ -369,7 +430,7 @@ function Skills() {
         ))}
       </div>
 
-      <div className="mt-12 grid md:grid-cols-3 gap-5">
+      <div className="mt-8 grid md:grid-cols-3 gap-5">
         <div className="md:col-span-1 p-6 rounded-2xl border border-border bg-card flex items-center gap-4">
           <div className="h-10 w-10 grid place-items-center rounded-full bg-accent/10 text-accent">
             <Award className="h-4 w-4" />
@@ -379,8 +440,8 @@ function Skills() {
             <div className="font-serif text-lg mt-1">AWS Certified Cloud Practitioner</div>
           </div>
         </div>
-        <Stat label="Years shipping" value="4+" />
-        <Stat label="Users served" value="100+" />
+        {/* <Stat label="Years shipping" value="4+" />
+        <Stat label="Users served" value="100+" /> */}
       </div>
     </section>
   );
@@ -401,12 +462,11 @@ function Contact() {
     <section id="contact" className="max-w-7xl mx-auto px-6 md:px-10 py-24 scroll-mt-20">
       <SectionHeader num="06" kicker="Contact" title="Let's connect." />
       <p className="max-w-2xl text-xl text-muted-foreground leading-relaxed mb-12">
-        I'm open to full‑time SWE / AI Engineer roles starting May 2026.
-        I usually reply within 24 hours.
+        I’m always excited to connect with people, learn from different experiences, and exchange ideas. Feel free to connect via LinkedIn or Email. I'd love to chat!
       </p>
       <div className="grid md:grid-cols-2 gap-6">
         <a href="mailto:aishwaryakore072@gmail.com"
-           className="group p-8 rounded-2xl border border-border bg-card hover:border-foreground transition-colors flex items-center gap-5">
+          className="group p-8 rounded-2xl border border-border bg-card hover:border-foreground transition-colors flex items-center gap-5">
           <div className="h-12 w-12 grid place-items-center rounded-full bg-accent/10 text-accent">
             <Mail className="h-5 w-5" />
           </div>
@@ -417,8 +477,8 @@ function Contact() {
             </div>
           </div>
         </a>
-        <a href="#"
-           className="group p-8 rounded-2xl border border-border bg-card hover:border-foreground transition-colors flex items-center gap-5">
+        <a href="https://www.linkedin.com/in/aishwaryakore"
+          className="group p-8 rounded-2xl border border-border bg-card hover:border-foreground transition-colors flex items-center gap-5">
           <div className="h-12 w-12 grid place-items-center rounded-full bg-accent/10 text-accent">
             <Linkedin className="h-5 w-5" />
           </div>

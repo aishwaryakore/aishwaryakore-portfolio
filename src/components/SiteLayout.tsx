@@ -41,7 +41,7 @@ export function SiteLayout() {
           </nav>
           <div className="hidden md:flex items-center gap-2 text-xs text-muted-foreground tabular-nums">
             <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-            Bloomington — {time}
+            United States — {time}
           </div>
         </div>
       </header>
@@ -51,7 +51,7 @@ export function SiteLayout() {
       <footer className="border-t border-border/60 mt-24">
         <div className="max-w-7xl mx-auto px-6 md:px-10 py-10 flex flex-wrap justify-between gap-4 text-sm text-muted-foreground">
           <div>© {new Date().getFullYear()} Aishwarya Kore.</div>
-          <div>Built with intention.</div>
+          {/* <div>Built with intention.</div> */}
         </div>
       </footer>
     </div>
